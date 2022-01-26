@@ -1,0 +1,12 @@
+package demoGenerics;
+import java.util.*;
+
+//<? extends xxx>
+//<? super xxx>
+//PECS - Producer Extend Consumer Super
+
+public class GenericClass {
+	public static void main(String[] args) {
+		
+	}
+}

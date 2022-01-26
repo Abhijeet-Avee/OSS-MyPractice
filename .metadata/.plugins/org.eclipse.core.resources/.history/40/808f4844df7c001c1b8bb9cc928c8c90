@@ -1,0 +1,33 @@
+package com.decorator.dp;
+
+//Greet: good morning, special good morning, new year sp good morning
+//Pizza : basicPizza, CheezToppingPizza,VegCgeezToppingPizza...
+
+interface Greet{
+	String sayGreet();
+}
+
+class SimpleGreet implements Greet{
+	@Override
+	public String sayGreet() {
+		return "good morning";
+	}
+}
+
+class SpecialGreet implements Greet{
+	private Greet greet;
+	public SpecialGreet(Greet greet) {
+		super();
+		this.greet = greet;
+	}
+
+
+	@Override
+	public String sayGreet() {
+		return "special "+ greet.sayGreet();
+	}
+}
+...
+public class DemoDecorator {
+
+}

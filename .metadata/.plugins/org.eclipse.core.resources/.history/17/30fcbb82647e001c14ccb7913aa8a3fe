@@ -1,0 +1,17 @@
+package com.jdbc;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class MainJdbc {
+	public static void main(String[] args) {
+		//Load the driver
+		try {
+			//Class.forName("com.mysql.jdbc.Driver");
+			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+			System.out.println("Driver is loaded");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

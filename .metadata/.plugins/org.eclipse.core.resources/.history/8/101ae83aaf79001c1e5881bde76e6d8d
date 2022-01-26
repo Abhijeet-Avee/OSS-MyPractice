@@ -1,0 +1,10 @@
+package multithreading;
+//run: it cannot return the processing result
+//run method cannot throw the exception
+
+
+public class ProblemWithRunnable {
+	public static void main(String[] args) {
+
+	}
+}

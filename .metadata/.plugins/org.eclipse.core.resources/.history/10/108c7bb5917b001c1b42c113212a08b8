@@ -1,0 +1,35 @@
+package factory.dp.jdbc;
+
+import java.sql.*;
+
+public class JdbcConnectionDemo {
+		public static void main(String[] args) {
+			//loading driver
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				System.out.println("Driver loaded");
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			}
+			try {
+				//creating connection object
+				Connection connection = DriverManager.getConnection
+						(
+								"jdbc:mysql://localhost:3306/ymsli",
+								"root",
+								"root");
+				System.out.println("Connection succesfull");
+				PreparedStatement statement = connection.prepareStatement("insert into Book (author, isbn, price, title) values (?, ?, ?, ?)");
+				statement.setString(1, "yash");
+				statement.setInt(2,1234 );
+				statement.setDouble(3, 3333.6);
+				statement.setString(4, "java head first");
+				statement.executeUpdate();
+				
+				//Print all the details from table
+				Statement statement = connection.createStatement();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+}

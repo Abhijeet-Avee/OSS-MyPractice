@@ -1,0 +1,19 @@
+package com.empapp.model.persistence;
+//Data Transfer Object - DTO
+public class Employee {
+	private int id;
+	private String ename;
+	private String city;
+	private String desi;
+	private double salary;
+	public Employee() {}
+	public Employee(int id, String ename, String city, String desi, double salary) {
+		super();
+		this.id = id;
+		this.ename = ename;
+		this.city = city;
+		this.desi = desi;
+		this.salary = salary;
+	}
+	
+}

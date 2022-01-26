@@ -1,0 +1,7 @@
+package com.rmi.server;
+
+import java.rmi.Remote;
+
+public interface AtmCard extends Remote{
+	
+}

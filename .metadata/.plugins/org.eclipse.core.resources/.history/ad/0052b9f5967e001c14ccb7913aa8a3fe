@@ -1,0 +1,18 @@
+package com.empapp.web.controller;
+
+import java.util.List;
+
+import com.empapp.model.persistence.Employee;
+import com.empapp.model.service.EmployeeService;
+import com.empapp.model.service.EmployeeServiceImpl;
+
+public class EmployeeAppTester {
+	public static void main(String[] args) {
+		EmployeeService employeeService = new EmployeeServiceImpl();
+		
+		List<Employee> employees = employeeService.getAll();
+		for(Employee employee: employees) {
+			System.out.println(employee);
+		}
+	}
+}

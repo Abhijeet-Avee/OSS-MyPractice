@@ -1,0 +1,18 @@
+package reflection;
+
+import java.lang.reflect.Constructor;
+
+class MyClass{
+	private MyClass() {
+		System.out.println("private constructor");
+	}
+}
+
+public class PrivateConstructor {
+	public static void main(String[] args) throws ClassNotFoundException {
+		Class class1 = Class.forName("reflection.MyClass");
+		
+		Constructor []constructors = class1.getDeclaredConstructors();
+		MyClass ob = (MyClass) constructors[0].newInstance();
+	}
+}

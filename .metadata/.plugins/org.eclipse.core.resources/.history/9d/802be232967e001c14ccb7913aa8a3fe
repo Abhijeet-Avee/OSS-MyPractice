@@ -1,0 +1,45 @@
+package com.empapp.model.service;
+
+import java.util.List;
+
+import com.empapp.model.exceptions.EmployeeNotFoundException;
+import com.empapp.model.persistence.Employee;
+import com.empapp.model.persistence.EmployeeDao;
+import com.empapp.model.persistence.EmployeeDaoImpl;
+
+public class EmployeeServiceImpl implements EmployeeService{
+	
+	private EmployeeDao employeeDao;
+	
+	public public EmployeeServiceImpl() {
+		employeeDao = new EmployeeDaoImpl();
+	}
+	
+	@Override
+	public void addEmployee(Employee employee) {
+	
+	}
+
+	@Override
+	public void deleteEmployee(int id) {
+		
+	}
+
+	@Override
+	public void updateEmployee(int id, Employee employee) {
+		
+	}
+
+	@Override
+	public List<Employee> getAll() {
+		
+		return null;
+	}
+
+	@Override
+	public Employee getById(int id) throws EmployeeNotFoundException {
+		
+		return null;
+	}
+
+}

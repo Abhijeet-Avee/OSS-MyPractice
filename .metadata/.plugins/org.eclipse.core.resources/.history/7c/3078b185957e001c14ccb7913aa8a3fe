@@ -1,0 +1,5 @@
+package com.empapp.model.service;
+
+public interface EmployeeService {
+
+}

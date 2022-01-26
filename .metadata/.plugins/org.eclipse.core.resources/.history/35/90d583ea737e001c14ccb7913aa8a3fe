@@ -1,0 +1,36 @@
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class MainJdbc {
+	static boolean tableExists(Connection connection, String tableName) throws SQLException{
+		DatabaseMetaData meta = connection.getMetaData();
+		ResultSet resultSet = meta.getTables(null, null, tableName, new String[] {"TABLE"});
+		return resultSet.next();
+	}
+	
+	public static void main(String[] args) {
+		try (Connection connection = ConnectionFactory.getConnection()) {
+			if(!(tableExists(connection, "employee"))) {
+				Statement statement = connection.createStatement();
+				statement.execute("create table employee("
+						+ "id int not null auto_increment primary key,"
+						+ "ename varchar(100) not null,"
+						+ "city varchar(50) not null,"
+						+ "desi varchar(10) not null,"
+						+ "salary double not null"
+						+ ")");
+				System.out.println("Table created!!");
+			}
+			PreparedStatement insertData = connection.prepareStatement("insert into employee("
+					+ "ename,city,desi,salary) values ('abhijeet','raxaul','engineer',55000)");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

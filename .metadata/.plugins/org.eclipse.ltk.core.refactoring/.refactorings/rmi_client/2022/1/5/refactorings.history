@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;atmCard&apos; from expression &apos;registry.lookup(&quot;obj&quot;)&apos;&#x0D;&#x0A;- Original project: &apos;rmi_client&apos;&#x0D;&#x0A;- Variable name: &apos;atmCard&apos;&#x0D;&#x0A;- Destination method: &apos;com.rmi.client.RmiClientMain.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;registry.lookup(&quot;obj&quot;)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;atmCard&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.rmi.client{RmiClientMain.java" name="atmCard" replace="true" selection="355 0" stamp="1643121358592" varType="false" version="1.0"/>
+</session>

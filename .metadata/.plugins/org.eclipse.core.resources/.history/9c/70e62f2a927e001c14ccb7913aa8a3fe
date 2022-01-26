@@ -1,0 +1,5 @@
+package com.empapp.model.exceptions;
+
+public class EmployeeNotFoundException {
+
+}

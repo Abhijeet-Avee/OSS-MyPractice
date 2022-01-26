@@ -1,0 +1,16 @@
+package desigmPattern.creational;
+
+interface Shape{
+	public void draw();
+}
+class Circle implements Shape{
+	@Override
+	public void draw() {
+		System.out.println("It is a Circle");
+	}
+}
+public class FactoryDP {
+	public static void main(String[] args) {
+		
+	}
+}

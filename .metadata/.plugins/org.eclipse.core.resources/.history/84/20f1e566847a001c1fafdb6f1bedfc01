@@ -1,0 +1,9 @@
+package desigmPattern.creational;
+
+//connection factories, logger(log4j)
+
+public class SingletonDP {
+	public static void main(String[] args) {
+		
+	}
+}

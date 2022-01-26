@@ -1,0 +1,11 @@
+package sinlgeton.dp.issues;
+
+/**
+ * Enum is better choice for singleton design pattern but still its a misuse of enum concept
+ * Enum is by default singleton. 
+ * Weakness: Eager implementation only.
+ * **/
+
+public class SingletonWithEnum {
+
+}

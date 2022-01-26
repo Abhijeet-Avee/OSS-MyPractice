@@ -1,0 +1,5 @@
+package com.empapp.model.service;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+}

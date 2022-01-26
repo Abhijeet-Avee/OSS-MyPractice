@@ -1,0 +1,5 @@
+package sinlgeton.dp.issues;
+
+public class SingletonWithEnum {
+
+}

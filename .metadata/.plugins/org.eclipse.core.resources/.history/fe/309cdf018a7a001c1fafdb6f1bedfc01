@@ -1,0 +1,127 @@
+package desigmPattern.creational;
+//uses: connection factories, logger(log4j)
+
+// How to implement singleton DP..?
+// object can be created via lazy approach and eager approach
+
+//Eager approach - object created at class loading
+//class Singleton{
+//	private static Singleton singleton = new Singleton();
+//	private Singleton() {}
+//	
+//	public static Singleton getSingleton() {
+//		return singleton;
+//	}
+//}
+
+// Attempt 2: lazy approach
+//class Singleton{
+//	private static Singleton singleton = null;
+//	private Singleton() {
+//		
+//	}
+//	public static Singleton getSingleton() {
+//		if(singleton == null)
+//			singleton = new Singleton();
+//		return singleton;
+//	}
+//}
+
+//Attempt 3 : using synchronized method
+//class Singleton{
+//	private static Singleton singleton = null;
+//	private Singleton() {
+//		
+//	}
+//	//add synchronized to avoid race condition due to access by multiple threads
+//	//simultaneously, hence if not synchronized threads will create more than one object
+//	public synchronized static Singleton getSingleton() {
+//		if(singleton == null)
+//			singleton = new Singleton();
+//		return singleton;
+//	}
+//}
+
+//Attempt 4: using synchronized block
+//class Singleton {
+//	private static Singleton singleton = null;
+//
+//	private Singleton() {
+//	}
+//
+//	public static Singleton getSingleton() {
+//		if (singleton == null) {
+//			synchronized (Singleton.class) {
+//				singleton = new Singleton();
+//			}
+//		}
+//		return singleton;
+//	}
+//}
+
+
+//Attempt 5: Double lock checking is to avoid reading 
+//null by a thread when other thread received the lock
+//class Singleton {
+//	private static Singleton singleton = null;
+//
+//	private Singleton() {
+//	}
+//	//Thread t1, Thread t2 [Double lock checking is also broken??]
+//	public static Singleton getSingleton() {
+//		if (singleton == null) {
+//			synchronized (Singleton.class) {
+//				if(singleton == null) {
+//					singleton = new Singleton();
+//				}
+//			}
+//		}
+//		return singleton;
+//	}
+//}
+
+//Attempt 6: using volatile keyword; double lock checking with volatile keyword
+//class Singleton {
+//	private static volatile Singleton singleton = null;
+//	private Singleton() {
+//	}
+//	public static Singleton getSingleton() {
+//		if (singleton == null) {
+//			synchronized (Singleton.class) {
+//				if(singleton == null) {
+//					singleton = new Singleton();
+//				}
+//			}
+//		}
+//		return singleton;
+//	}
+//}
+
+
+//Attempt 7 : Serialization and Deserialization issue
+// Since constructors are not called
+class Singleton {
+	private static volatile Singleton singleton = null;
+	private Singleton() {
+	}
+	public static Singleton getSingleton() {
+		if (singleton == null) {
+			synchronized (Singleton.class) {
+				if(singleton == null) {
+					singleton = new Singleton();
+				}
+			}
+		}
+		return singleton;
+	}
+}
+
+public class SingletonDP {
+	public static void main(String[] args) {
+		Singleton singleton = Singleton.getSingleton();
+		Singleton singleton2 = Singleton.getSingleton();
+
+		System.out.println(singleton.hashCode());
+		System.out.println(singleton2.hashCode());
+	}
+}

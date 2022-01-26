@@ -1,0 +1,26 @@
+package factory.dp.jdbc;
+
+import java.sql.*;
+
+public class JdbcConnectionDemo {
+		public static void main(String[] args) {
+			//loading driver
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				System.out.println("Driver loaded");
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			}
+			try {
+				Connection connection = DriverManager.getConnection
+						(
+								"jdbc:mysql://localhost:3306/ymsli",
+								"root",
+								"root");
+				System.out.println("Connection succesfull");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+		}
+}

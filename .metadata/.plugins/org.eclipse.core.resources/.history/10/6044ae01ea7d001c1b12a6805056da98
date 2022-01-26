@@ -1,0 +1,7 @@
+package com.rmi.server;
+
+import java.rmi.server.UnicastRemoteObject;
+
+public class AtmCardImpl extends UnicastRemoteObject implements AtmCard{
+	
+}

@@ -1,0 +1,18 @@
+package desigmPattern.creational;
+//uses: connection factories, logger(log4j)
+// How to implement singleton DP..?
+
+class Singleton{
+	private static Singleton singleton = new Singleton();
+	private Singleton() {}
+	
+	public static Singleton getSingleton() {
+		return singleton;
+	}
+}
+
+public class SingletonDP {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,12 @@
+package desigmPattern.creational;
+
+import java.util.Date;
+
+public class DatePOC {
+	public static void main(String[] args) {
+		//date: Util[otherwise]	vs sql[jdbc]
+		
+		Date date = new Date(2011, 12, 12);
+		System.out.println(date);
+	}
+}

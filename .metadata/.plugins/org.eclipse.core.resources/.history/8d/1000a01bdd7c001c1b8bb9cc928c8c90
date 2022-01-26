@@ -1,0 +1,26 @@
+package com.adapter.dp;
+
+import java.util.*;
+
+class RoundPeg{
+	public void insertToHole(String data) {
+		System.out.println("insert to hole :"+data);
+	}
+}
+
+class SquarePeg{
+	public void insertToSquare(String data) {
+		System.out.println("insert to square :"+data);
+	}
+}
+
+public class AdapterDp {
+	public static void main(String[] args) {
+		SquarePeg squarePeg = null;
+		myMethod(squarePeg);
+	}
+
+	private static void myMethod(SquarePeg squarePeg) {
+		squarePeg.insertToSquare("hello shape");		
+	}
+}

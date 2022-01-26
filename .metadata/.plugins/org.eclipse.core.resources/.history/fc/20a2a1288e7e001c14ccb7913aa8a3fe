@@ -1,0 +1,9 @@
+package com.empapp.model.persistence;
+
+public class Employee {
+	private int id;
+	private String ename;
+	private String city;
+	private String desi;
+	private double salary;
+}

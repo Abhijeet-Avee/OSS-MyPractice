@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void printAllEmployees(EmployeeService employeeService)&apos; from &apos;com.empapp.web.controller.EmployeeAppTester.main()&apos; to &apos;com.empapp.web.controller.EmployeeAppTester&apos;&#x0D;&#x0A;- Original project: &apos;DAO-DTO-DP&apos;&#x0D;&#x0A;- Method name: &apos;printAllEmployees&apos;&#x0D;&#x0A;- Destination type: &apos;com.empapp.web.controller.EmployeeAppTester&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;printAllEmployees&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.empapp.web.controller{EmployeeAppTester.java" name="printAllEmployees" replace="false" selection="413 130" stamp="1643194943019" version="1.0" visibility="2"/>
+</session>

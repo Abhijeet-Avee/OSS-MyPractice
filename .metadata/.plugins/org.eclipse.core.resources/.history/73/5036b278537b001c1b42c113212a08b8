@@ -1,0 +1,25 @@
+package mypractice.dp;
+
+class Singleton6 {
+	private static volatile Singleton6 singleton1 = null;
+
+	private Singleton6() {
+	}
+
+	public static Singleton6 getSingleton5() {
+		if (singleton1 == null) {
+			if (singleton1 == null) {
+				synchronized (Singleton6.class) {
+					singleton1 = new Singleton6();
+				}
+			}
+		}
+		return singleton1;
+	}
+}
+
+public class SingletonDP6 {
+	public static void main(String[] args) {
+
+	}
+}

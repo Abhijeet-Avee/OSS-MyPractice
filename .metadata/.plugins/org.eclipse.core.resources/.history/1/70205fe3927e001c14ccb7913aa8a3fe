@@ -1,0 +1,39 @@
+package com.empapp.model.persistence;
+
+import java.util.List;
+
+import com.empapp.model.exceptions.EmployeeNotFoundException;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	@Override
+	public void addEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateEmployee(int id, Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee getById(int id) throws EmployeeNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

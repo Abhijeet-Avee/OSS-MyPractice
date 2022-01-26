@@ -1,0 +1,13 @@
+package reflection;
+
+class MyClass{
+	private MyClass() {
+		System.out.println("private constructor");
+	}
+}
+
+public class PrivateConstructor {
+	public static void main(String[] args) {
+		Class class1 = Class.forName("reflection.MyClass");
+	}
+}

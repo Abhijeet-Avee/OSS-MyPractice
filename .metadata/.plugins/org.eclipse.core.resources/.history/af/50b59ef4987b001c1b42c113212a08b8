@@ -1,0 +1,9 @@
+package factory.dp.jdbc;
+
+import java.util.HashMap;
+
+public class mapdemo {
+	public static void main(String[] args) {
+		Map<Integer,String> map = new HashMap<Integer,String>();
+	}
+}

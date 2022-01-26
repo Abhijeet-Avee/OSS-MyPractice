@@ -1,0 +1,31 @@
+package demoGenerics;
+
+interface Flowable{
+	
+}
+
+class Cake{}
+class Water implements Flowable{}
+class Juice implements Flowable{}
+class Wine implements Flowable{}
+class Glass<T extends Flowable>{
+	private T obj;
+
+	public T getObj() {
+		return obj;
+	}
+
+	public void setObj(T obj) {
+		this.obj = obj;
+	}
+	
+}
+
+public class RealLiefExOFSuperAndExtends {
+	public static void main(String[] args) {
+		Glass<Juice> glass = new Glass<>();
+		glass.setObj(new Juice());
+		Juice juice = glass.getObj();
+		
+	}
+}

@@ -1,0 +1,20 @@
+package mypractice.dp;
+
+//APPROACH: Using synchronized block to avoid performance cost. 
+
+class Singleton4 {
+	private static Singleton4 singleton1 = null;
+
+	private Singleton4() {
+	}
+
+	public synchronized static Singleton4 getSingleton4() {
+		if (singleton1 == null)
+			singleton1 = new Singleton4();
+		return singleton1;
+	}
+}
+
+public class SingletonDP4 {
+
+}

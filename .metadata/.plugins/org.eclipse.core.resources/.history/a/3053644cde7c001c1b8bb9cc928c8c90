@@ -1,0 +1,5 @@
+package com.decorator.dp;
+
+public class DemoDecorator {
+
+}
