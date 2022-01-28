@@ -1,7 +1,0 @@
-package desigmPattern.creational;
-
-//conncetion factories, logger(log4j)
-
-public class SingletonDP {
-
-}

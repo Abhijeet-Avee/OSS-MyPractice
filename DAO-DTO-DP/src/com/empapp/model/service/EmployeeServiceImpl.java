@@ -3,6 +3,7 @@ package com.empapp.model.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.empapp.model.exceptions.DataAccessException;
 import com.empapp.model.exceptions.EmployeeNotFoundException;
 import com.empapp.model.persistence.Employee;
 import com.empapp.model.persistence.EmployeeDao;
@@ -35,7 +36,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
-	public List<Employee> getAll() {
+	public List<Employee> getAll() throws DataAccessException {
 		List<Employee> employees = new ArrayList<>();
 		employees = employeeDao.getAll();
 		return employees;

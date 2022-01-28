@@ -2,6 +2,7 @@ package com.empapp.web.controller;
 
 import java.util.List;
 
+import com.empapp.model.exceptions.DataAccessException;
 import com.empapp.model.persistence.Employee;
 import com.empapp.model.service.EmployeeService;
 import com.empapp.model.service.EmployeeServiceImpl;
@@ -22,7 +23,13 @@ public class EmployeeAppTester {
 	}
 
 	private static void printAllEmployees(EmployeeService employeeService) {
-		List<Employee> employees = employeeService.getAll();
+		List<Employee> employees=null;
+		try {
+			employees = employeeService.getAll();
+		} catch (DataAccessException e) {
+			e.printStackTrace();
+			e.getCause();
+		}
 		for(Employee employee: employees) {
 			System.out.println(employee);
 		}
