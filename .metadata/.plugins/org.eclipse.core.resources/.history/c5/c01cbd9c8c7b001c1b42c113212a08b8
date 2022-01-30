@@ -1,5 +1,0 @@
-package factory.dp.jdbc;
-
-public class JdbcConnectionDemo {
-
-}

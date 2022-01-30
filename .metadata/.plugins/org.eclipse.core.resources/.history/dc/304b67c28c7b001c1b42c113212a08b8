@@ -1,9 +1,0 @@
-package factory.dp.jdbc;
-
-import java.sql.*;
-
-public class JdbcConnectionDemo {
-		public static void main(String[] args) {
-			Connection connection = DriverManager.getConnection("","root","root");
-		}
-}
