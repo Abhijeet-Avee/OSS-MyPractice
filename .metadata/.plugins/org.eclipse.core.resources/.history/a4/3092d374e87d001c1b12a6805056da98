@@ -1,5 +1,0 @@
-package com.rmi.server;
-
-public interface AtmCard extends Remote{
-	
-}

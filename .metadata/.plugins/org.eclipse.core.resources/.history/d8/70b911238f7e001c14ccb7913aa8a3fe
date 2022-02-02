@@ -1,5 +1,0 @@
-package com.empapp.model.persistence;
-
-public interface EmployeeDao {
-
-}
