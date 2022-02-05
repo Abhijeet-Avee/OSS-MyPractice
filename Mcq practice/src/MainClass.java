@@ -1,18 +1,11 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class MainClass {
 	public static void main(String[] args) {
-		int arr[][]=new int[3][];
-		arr[0]=new int[1];
-		arr[1]=new int[2];
-		arr[2]=new int[3];
-		
-		int sum=0;
-		for(int i=0;i<3; ++i)
-			for(int j=0;j<i+1;++j)
-				arr[i][j]=j+1;
-		
-			for(int i=0;i<3;++i)
-				for(int j=0;j<i+1;++j)
-					sum+=arr[i][j];
-			System.out.println(sum);
+		List<String> strings = Arrays.asList("eeny ", "meeny ", "miny ", "mo ");
+		Collections.sort(strings, (str1, str2) -> str2.compareTo(str1));
+		strings.forEach(string -> System.out.print(string));
 	}
 }
